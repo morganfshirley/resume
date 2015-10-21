@@ -1,8 +1,7 @@
 resume
 ======
 
-This is both my personal resume and an example of a DevOps Engineer's
-technical resume. 
+This is my personal resume. 
 
 The LaTeX code is licensed under the MIT license, to prevent any ambiguity
 about the fact that you are welcome to copy it and use it for whatever
@@ -18,46 +17,3 @@ file.
 
 To generate and view the PDF, I run ``pdflatex resume.tex && evince
 resume.pdf``. You can also use the included Makefile if you prefer.
-
-Job Search Links
-================
-
-[We Work Remotely](https://weworkremotely.com/) has remote tech industry jobs
-[whitetruffle](https://www.whitetruffle.com) seems to aggregate mostly
-smaller, startup-type tech opportunities
-[ziprecruiter](https://www.ziprecruiter.com/jobs) is an aggregator that covers
-categories outside of tech, but doesn't appear to have a very fine-grained
-search within categories
-
-[Hired](https://hired.com/signup) is a poorly-named but seemingly well-executed 
-system wherein your profile goes in a marketplace for a week and companies 
-sort of bid on you.
-
-Portland-specific job aggregators
-=================================
-
-* Meet people at events on [Calagator](http://calagator.org/).
-* [pdxpipeline](http://pdxpipeline.com/jobs/) has tech and non-tech listings
-* [Silicon Florist](http://siliconflorist.com/jobs/) has salaried and hourly
-  tech postings
-* [portlandtech](http://portlandtech.org/) has a bunch of poorly formatted
-* postings, and some useful sidebar links
-
-Interview Prep and Company Research Links
-=========================================
-
-Julia Evans's [Questions I'm Asking In
-Interviews](http://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/)
-
-Julie Pagano's [Organization information
-template](http://juliepagano.com/blog/2015/08/15/job-search-retrospective/org-info-template.pdf) repeats some of Evans's questions
-
-Liz Abinate's post on [culture
-smells](http://lizabinante.com/blog/getting-hired-without-getting-burned/)
-
-LaTeX Links
-===========
-
-https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1
-
-
