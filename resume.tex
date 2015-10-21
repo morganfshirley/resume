@@ -1,5 +1,6 @@
-% E. Dunham -- Resume
-% Contents Copyright (C) 2014, E. Dunham
+% Morgan Shirley -- Resume
+% Template Copyright (C) 2014, E. Dunham
+% Contents Copyright (C) 2015, Morgan shirley
 
 % LaTeX code for rendering the resume is distributed under the MIT license.
 % See LICENSE.txt. It means you can use the code for whatever you want,
@@ -33,21 +34,22 @@
 
 \usepackage[normalem]{ulem} % for the underlines
 \usepackage[compact]{titlesec}
+\usepackage{pbox}
         
 \newcommand{\heading}[1]{
     \section*{\uline{\hfill #1}}
 }
 
 \newcommand{\squish}{
-    \setlength{\itemsep}{0.5pt}
+    \setlength{\itemsep}{0pt}
     % tweak parskip value to adjust size on page
     \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0.5pt}
+    \setlength{\parsep}{0pt}
 }
 
 % naming it 'date' would conflict with builtins
 \newcommand{\when}[1]{
-    \hfill \texttt{#1}
+    \hfill \texttt{#1}%
 }
 
 % place, optional title, date
@@ -57,10 +59,10 @@
     \else
         \item[{#1}, \emph{#2}]
     \fi
-    \when{#3}
+    \when{#3}%
 }
 
-\newcommand{\contact}[4]{
+\newcommand{\contact}[7]{
     \centerline{
         \large       
         \texttt{#1}
@@ -69,179 +71,122 @@
         $\bullet$
         \texttt{#3}
     }
-    \centerline{
-        \emph{#4}
-    }
+    
+    \begin{center}
+    	\begin{tabular}{l l}
+    	\textbf{Current} & \textbf{Permanent} \\
+        {#4} & {#6} \\
+        {#5} & {#7}
+        
+        \end{tabular}
+    \end{center}
 }
 
 \newcommand{\skill}[2]{
     \textbf{#1} \hfill #2
 }
 
-% http://www.parashift.com/c++-faq-lite/latex-macros.html
-\newcommand{\CPP}{
-    C\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}
-}
+
+% include file for information we want to keep secret
+\input{personal-info.tex}
 
 \begin{document}
 
-\centerline{{\Huge \bf E. Dunham}}
+\centerline{{\Huge \bf Morgan Shirley}}
 \bigskip
 
-\contact{edunham@edunham.net}
-        {edunham.net}
-        {github.com/edunham}
-        {Portland, Oregon}
+\contact{morganfshirley@gmail.com}
+        {morganfshirley.com}
+        {\phone}
+        {\currentaddr}{\currentcity}
+        {\permanentaddr}{\permanentcity}
+        
+\heading{Education}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\heading{Skills}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\skill{Development}{Python, C/\CPP, HTML/CSS/Javascript, Django, Flask}
-
-\skill{Systems Administration}{Ansible, SaltStack, Travis, Apache, Mailman, DNS, LDAP, SSH}
-
-\skill{Collaboration}{IRC, Git \& GitHub, Sphinx, Pandoc, Jira/RT/Bugzilla} 
-
-\skill{Robotics}{Mechanical design \& prototyping, 3D modeling, OpenCV, Arduino}
-
-\skill{Leadership}{Teaching, public speaking, event planning, curriculum
-design}
+\begin{description}
+	\squish
+	\experience{Oregon State University, Corvallis, OR}
+	{}
+	{2012 - Present}
+	
+	\textbf{Major:} Computer Science, Honors College \textbf{Minor:} Mathematics \\
+	\textbf{GPA:} 3.99/4.00
+	
+\end{description}
 
 \heading{Employment}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{description}
-\squish
-\experience{Mozilla Research}
-           {DevOps Engineer}
-           {05/2015 - Present}
-           
-    Developed and maintained hosting and continuous integration infrastructure
-    for Rust and Servo projects
-
-\experience{Urban Airship}
-           {Operations Team Intern}
-           {06/2014 - 09/2014}
-    
-    Migrated services using Chef and Jenkins to facilitate datacenter move
-
-    Led interdisciplinary Hack Week team to develop Flask frontend to internal
-    LDAP API
-
-    Audited and improved documentation for over 30 internal Java, Go, and Python
-    services
-
-\experience{OSU Open Source Lab}
-           {Student Systems Administrator}
-           {12/2012 - 06/2014}
-
-    Solved hardware and software problems for users from over 100 hosted projects
-
-\experience{Intel}
-           {Software Enabling Group USB3 Team Intern}
-           {06/2012 - 09/2012}
-
-    Participated in agile development with Scrum methodology
-
-    Prototyped solution to double Android USB3 throughput speed in specific
-    use cases with Java, C, \CPP
-
-\experience{OSU Open Source Lab}
-           {Student Software Developer}
-           {04/2011 - 06/2012}
-
-    Wrote and debugged Python, Django, JavaScript, CSS, HTML
-
+	\squish
+	\experience{Oregon State University}
+	{Research Assistant}
+	{06/2014 - Present}%
+	\vspace*{-4pt}
+	\begin{itemize} \squish
+		\item Researched combinatorial optimization problems on graphs
+		\item Discussed computer science theory with faculty and graduate students
+	\end{itemize}
+	
+	\squish
+	\experience{Oregon State University}
+	{Teaching Assistant, Peer Leader}
+	{09/2013 - 12/2014}%
+	\vspace*{-4pt}
+	\begin{itemize} \squish
+	\item Instructed 30-person Computer Science labs
+	\item Assisted students during office hours
+	\item Graded assignments
+	\item Trained other Teaching Assistants on effective leadership techniques
+	\end{itemize}
+	
+	\squish
+	\experience{Oregon Catholic Press}
+	{Online Technologies Quality Assistant}
+	{07/2012 - 09/2012}%
+	\vspace*{-4pt}
+	\begin{itemize} \squish
+		\item Created functional tests for MySQL database transactions
+		\when{07/2013 - 09/2013} % second date
+		\item Debugged PHP code
+		\item Set up continuous integration with Jenkins
+	\end{itemize}
+	
+	
+	
 \end{description}
 
+
+\heading{Skills}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\skill{Programming}{C/C++, Java, PHP, Python}%
+
+\skill{Systems Administration}{Linux installation, command line, and server operation}%
+
+\skill{Theory}{Development and analysis of algorithms, computational complexity, cryptography}%
+
+\heading{Awards}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}\squish
+	\item Oregon State University Presidential Scholarship (\$32,000)
+	\item Central East Portland Rotary Scholarship (\$10,000)
+	\item Candidate for the United States Presidential Scholars Program
+	\item AP Scholar with Honor
+	\item Valedictorian at Reynolds High School
+\end{itemize}
 \heading{Leadership}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{description}
 \squish
-\experience{OSU DevOps Bootcamp}
-           {Founder}
-           {2013 - 2015}
-
-    Designed and implemented comprehensive systems engineering curriculum
-
-    Distributed Apache 2.0 licensed curriculum (devopsbootcamp.osuosl.org)
-    
-\experience{OSU Linux Users Group}
-           {President}
-           {2012 - 2014}
-
-    Organized weekly meetings, mentored students in FOSS involvement
-
-\experience{OSU EECS}
-           {Peer Leader, Peer Adviser, and Teaching Assistant}
-           {2011 - 2012}
-
-    Taught \CPP programming skills, instructed 30-person labs, graded assignments
-
+\experience{Oregon State University ACM Student Chapter}
+	{Secretary}
+	{01/2015 - Present}%
+	\vspace*{-4pt}
+	\begin{itemize} \squish
+		\item Recorded meeting minutes
+		\item Organized sessions in preparation for an ACM programming competition
+	\end{itemize}
+	
 \end{description}
 
-\heading{Academics}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{description}
-\squish
-\experience{Oregon State University}
-           {}
-           {2010-2015}
 
-    Upper-division coursework in Computer Science including Operating
-    Systems,\\
-    Software Engineering, Analysis of Algorithms, Cryptography, and Applied
-    Robotics.
-
-\end{description}
-
-\heading{Speaking}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{description}
-\squish
-
-%\experience{OpenWest}
-%           {}
-%           {05/2015}
-%
-%    ``Human Hacking'', ``Thinking in Git'', and ``Teaching DevOps to
-%    University Students''
-
-\experience{LinuxFest Northwest}
-           {}
-           {04/2015}
-
-    ``Algorithmic Complexity and You'', ``Thinking in Git''
-
-\experience{Southern California Linux Expo (SCALE)}
-           {}
-           {02/2015}
-
-    ``Human Hacking''
-
-%\experience{Seattle GNU/Linux Conference}
-%           {}
-%           {10/2014}
-%
-%    ``Human Hacking'', ``Intermediate IRC'', and ``Thinking in Git''
-
-\experience{O'Reilly OSCON}
-           {}
-           {07/2014}
-
-    ``DevOps for University Students''
-
-%\experience{Portland State University Association for Computing Machinery}
-%           {}
-%           {05/2014}
-%
-%    ``Git Workshop''
-
-%\experience{LinuxFest Northwest}
-%           {}
-%           {04/2014}
-%
-%    ``Teaching DevOps to University Students''
-
-\hfill ... and more at http://edunham.net/pages/talks.html
-
-\end{description}
 \end{document}
