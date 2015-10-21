@@ -34,7 +34,7 @@
 
 \usepackage[normalem]{ulem} % for the underlines
 \usepackage[compact]{titlesec}
-\usepackage{pbox}
+\usepackage{enumitem}
         
 \newcommand{\heading}[1]{
     \section*{\uline{\hfill #1}}
@@ -73,6 +73,7 @@
     }
     
     \begin{center}
+    	\scriptsize
     	\begin{tabular}{l l}
     	\textbf{Current} & \textbf{Permanent} \\
         {#4} & {#6} \\
@@ -107,7 +108,7 @@
 	\squish
 	\experience{Oregon State University, Corvallis, OR}
 	{}
-	{2012 - Present}
+	{09/2012 - Present}
 	
 	\textbf{Major:} Computer Science, Honors College \textbf{Minor:} Mathematics \\
 	\textbf{GPA:} 3.99/4.00
@@ -118,21 +119,34 @@
 
 \begin{description}
 	\squish
-	\experience{Oregon State University}
+	\experience
+	{Online Tutor}
+	{Oregon State University}
+	{07/2015 - Present}%
+	\vspace*{-4pt}
+	\begin{itemize}[leftmargin=*] \squish
+		\item Tutored online students on discrete mathematics and analysis of algorithms
+		\item Developed improvements to online tutoring process
+	\end{itemize}
+
+	\squish
+	\experience
 	{Research Assistant}
+	{Oregon State University}
 	{06/2014 - Present}%
 	\vspace*{-4pt}
-	\begin{itemize} \squish
+	\begin{itemize}[leftmargin=*] \squish
 		\item Researched combinatorial optimization problems on graphs
 		\item Discussed computer science theory with faculty and graduate students
 	\end{itemize}
 	
 	\squish
-	\experience{Oregon State University}
+	\experience
 	{Teaching Assistant, Peer Leader}
+	{Oregon State University}
 	{09/2013 - 12/2014}%
 	\vspace*{-4pt}
-	\begin{itemize} \squish
+	\begin{itemize}[leftmargin=*] \squish
 	\item Instructed 30-person Computer Science labs
 	\item Assisted students during office hours
 	\item Graded assignments
@@ -140,11 +154,12 @@
 	\end{itemize}
 	
 	\squish
-	\experience{Oregon Catholic Press}
+	\experience
 	{Online Technologies Quality Assistant}
+	{Oregon Catholic Press}
 	{07/2012 - 09/2012}%
 	\vspace*{-4pt}
-	\begin{itemize} \squish
+	\begin{itemize}[leftmargin=*] \squish
 		\item Created functional tests for MySQL database transactions
 		\when{07/2013 - 09/2013} % second date
 		\item Debugged PHP code
@@ -158,16 +173,19 @@
 
 \heading{Skills}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\skill{Programming}{C/C++, Java, PHP, Python}%
-
-\skill{Systems Administration}{Linux installation, command line, and server operation}%
-
-\skill{Theory}{Development and analysis of algorithms, computational complexity, cryptography}%
+\begin{itemize} [leftmargin=1.35cm]\squish
+	\item Programming in C/C++, Java, Python, and PHP
+	\item Version control with Git, SVN, and Mercurial on GitHub and BitBucket
+	\item Typesetting 
+	\item Linux installation, command line, and server operation
+	\item Software development, alone and in a group
+	\item Theory and application of computer algorithms
+\end{itemize}
 
 \heading{Awards}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}\squish
-	\item Oregon State University Presidential Scholarship (\$32,000)
-	\item Central East Portland Rotary Scholarship (\$10,000)
+\begin{itemize}[leftmargin=1.35cm]\squish
+	\item Oregon State University Presidential Scholarship
+	\item Central East Portland Rotary Scholarship
 	\item Candidate for the United States Presidential Scholars Program
 	\item AP Scholar with Honor
 	\item Valedictorian at Reynolds High School
@@ -176,11 +194,11 @@
 
 \begin{description}
 \squish
-\experience{Oregon State University ACM Student Chapter}
-	{Secretary}
+\experience{Oregon State University ACM Student Chapter -- Secretary}
+	{}
 	{01/2015 - Present}%
 	\vspace*{-4pt}
-	\begin{itemize} \squish
+	\begin{itemize} [leftmargin=*]\squish
 		\item Recorded meeting minutes
 		\item Organized sessions in preparation for an ACM programming competition
 	\end{itemize}
