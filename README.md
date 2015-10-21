@@ -8,8 +8,8 @@ about the fact that you are welcome to copy it and use it for whatever
 purposes you like. The intended purpose is to make your own resume pretty
 without having to think very much about LaTeX. 
 
-See my advice at http://lug.oregonstate.edu/blog/resume/ for other technical
-resume tips. 
+See the template creater's advice at http://lug.oregonstate.edu/blog/resume/ 
+for other technical resume tips. 
 
 To use my resume as a template for your own, either fork this repository (that
 "fork" button in the upper right) or simply take a copy of the resume.tex
